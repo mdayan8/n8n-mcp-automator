@@ -1,0 +1,4 @@
+interface:
+  display_name: "n8n MCP Automator"
+  short_description: "Build and validate n8n workflows with MCP"
+  default_prompt: "Use $n8n-mcp-automator to design, validate, or debug an n8n automation workflow."
