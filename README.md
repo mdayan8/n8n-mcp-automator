@@ -4,13 +4,15 @@
   <img src="assets/banner.svg" alt="n8n MCP Automator banner" width="960" />
 </p>
 
-`n8n-mcp-automator` is a Claude Code-first skill for turning prompts into production-shaped n8n workflows. It is still agent-agnostic under the hood and works for tools that can load local skill folders, including Codex, Warp, Antigravity, Gemini CLI, Cursor, OpenCode, and similar systems.
+`n8n-mcp-automator` is a Claude Code-first skill for turning prompts into production-shaped n8n workflows. If you are searching for n8n workflow automation, n8n MCP server workflows, Claude Code skills, workflow validation, node configuration, or expression debugging, this repo is built for that job. It is still agent-agnostic under the hood and works for tools that can load local skill folders, including Codex, Warp, Antigravity, Gemini CLI, Cursor, OpenCode, and similar systems.
 
 <p align="center">
   <img alt="n8n" src="https://img.shields.io/badge/topic-n8n%20%26%20MCP-fd5f00?logo=n8n&logoColor=white" />
   <img alt="agents" src="https://img.shields.io/badge/agents-multi--agent%20skill-111827?logo=github&logoColor=white" />
   <img alt="Claude Code" src="https://img.shields.io/badge/flagship-Claude%20Code-1f2937?logo=anthropic&logoColor=white" />
-  <img alt="X" src="https://img.shields.io/badge/follow-%40mdayan24X-000000?logo=x&logoColor=white" />
+  <a href="https://x.com/mdayan24X" aria-label="Open X profile for mdayan24X">
+    <img alt="X" src="https://img.shields.io/badge/follow-%40mdayan24X-000000?logo=x&logoColor=white" />
+  </a>
 </p>
 
 <p align="center">
@@ -27,6 +29,7 @@ Use this skill when an agent needs to:
 
 ## Best At
 
+- Claude Code-first n8n workflow automation
 - recursive workflow repair
 - expression debugging
 - node configuration sanity checks
@@ -35,6 +38,9 @@ Use this skill when an agent needs to:
 
 ## What It Covers
 
+- n8n workflow automation
+- n8n MCP server usage
+- Claude Code skill packaging
 - expression syntax and field mapping
 - MCP tool selection and mode boundaries
 - workflow pattern selection
@@ -57,6 +63,12 @@ Use this skill when an agent needs to:
 | GitHub Copilot | `.github/skills/` | Project-local skill path |
 | OpenCode | `.opencode/skills/` | Project-local skill path |
 | Warp | `.warp/skills/` or agent-specific skill folders | Check the local skill path used by your setup |
+
+## Why This Repo Exists
+
+Most workflow prompts fail for the same reasons: wrong node choice, weak expressions, missing credentials, and validation loops that never resolve. This skill is meant to reduce that failure rate by giving the agent a strict n8n playbook and a recursive repair loop.
+
+If you want a fast answer to questions like “How do I build this n8n workflow correctly?” or “Why is this expression breaking?”, this is the repo to start with.
 
 ## Install
 
@@ -92,6 +104,15 @@ If your agent uses a different local skill path, copy the folder there instead.
 - [n8n workflow docs](https://docs.n8n.io/workflows/)
 - [n8n Code node docs](https://docs.n8n.io/code/code-node/)
 - [community n8n-mcp toolset](https://github.com/czlonkowski/n8n-mcp)
+
+## Search Phrases
+
+- n8n workflow automation
+- n8n MCP server
+- Claude Code n8n skill
+- n8n workflow validation
+- n8n expression debugging
+- n8n node configuration
 
 ## Contributing
 
