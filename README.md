@@ -4,7 +4,20 @@
   <img src="assets/banner.svg" alt="n8n MCP Automator banner" width="960" />
 </p>
 
-`n8n-mcp-automator` is a Claude Code-first skill for turning prompts into production-shaped n8n workflows. If you are searching for n8n workflow automation, n8n MCP server workflows, Claude Code skills, workflow validation, node configuration, or expression debugging, this repo is built for that job. It is still agent-agnostic under the hood and works for tools that can load local skill folders, including Codex, Warp, Antigravity, Gemini CLI, Cursor, OpenCode, and similar systems.
+`n8n-mcp-automator` is a Claude Code-first skill for n8n workflow automation, n8n MCP server workflows, and production-shaped automations. It helps an agent turn a plain prompt into a valid workflow plan, then validate expressions, node configuration, and failure recovery before the workflow ships. It is still agent-agnostic under the hood and works for tools that can load local skill folders, including Codex, Warp, Antigravity, Gemini CLI, Cursor, OpenCode, and similar systems.
+
+This repo is for people who want:
+
+- faster n8n workflow design from a plain prompt
+- fewer broken expressions and node configs
+- better validation before deployment
+- a reusable skill for Claude Code and other local-skill agents
+
+## About
+
+This is a focused, opinionated skill for building and validating n8n workflows correctly the first time. It is built around the failure modes that matter most in practice: wrong node selection, invalid expressions, missing credentials, bad field mapping, and validation loops that never resolve.
+
+If you are searching for `Claude Code n8n skill`, `n8n workflow validation`, `n8n expression debugging`, or `n8n MCP server automation`, this repo is designed to surface for those queries and give a direct answer.
 
 <p align="center">
   <img alt="n8n" src="https://img.shields.io/badge/topic-n8n%20%26%20MCP-fd5f00?logo=n8n&logoColor=white" />
@@ -19,6 +32,24 @@
   <img src="assets/logo.svg" alt="n8n MCP Automator logo" width="144" />
 </p>
 
+## Table of Contents
+
+- [Why This Repo Exists](#why-this-repo-exists)
+- [About](#about)
+- [Highlights](#highlights)
+- [What It Covers](#what-it-covers)
+- [Compatibility](#compatibility)
+- [What You Get](#what-you-get)
+- [Install](#install)
+- [Example Requests](#example-requests)
+- [Repository Structure](#repository-structure)
+- [Related Sources](#related-sources)
+- [Search Phrases](#search-phrases)
+- [Contributing](#contributing)
+- [Maintainer](#maintainer)
+- [License](#license)
+- [Safety Note](#safety-note)
+
 Use this skill when an agent needs to:
 
 - design a new n8n workflow from a prompt
@@ -27,7 +58,7 @@ Use this skill when an agent needs to:
 - validate workflow JSON before activation or deployment
 - work with the n8n MCP server or the community n8n-mcp toolset
 
-## Best At
+## Highlights
 
 - Claude Code-first n8n workflow automation
 - recursive workflow repair
@@ -35,6 +66,8 @@ Use this skill when an agent needs to:
 - node configuration sanity checks
 - production-shaped workflow planning
 - keeping Claude Code useful without losing multi-agent portability
+- recursive repair loops for broken workflows
+- validation-first workflow design
 
 ## What It Covers
 
@@ -50,6 +83,7 @@ Use this skill when an agent needs to:
 - node configuration rules
 - Code node JavaScript
 - Code node Python
+- common n8n failure recovery
 
 ## Compatibility
 
@@ -70,12 +104,20 @@ Most workflow prompts fail for the same reasons: wrong node choice, weak express
 
 If you want a fast answer to questions like “How do I build this n8n workflow correctly?” or “Why is this expression breaking?”, this is the repo to start with.
 
+## What You Get
+
+- Claude Code-first branding with multi-agent compatibility
+- a recursive repair loop for workflow failures
+- a failure taxonomy that explains what broke
+- a validation order that matches how n8n actually fails
+- concise references for expressions, node config, patterns, and Code nodes
+
 ## Install
 
 Copy the folder into the skill directory your agent reads. For example:
 
 ```bash
-SKILLS_DIR="${SKILLS_DIR:-$HOME/.codex/skills}" && mkdir -p "$SKILLS_DIR" && cp -R . "$SKILLS_DIR/n8n-mcp-automator"
+SKILLS_DIR="${SKILLS_DIR:-$HOME/.codex/skills}" && mkdir -p "$SKILLS_DIR" && rsync -a --exclude '.git' ./ "$SKILLS_DIR/n8n-mcp-automator/"
 ```
 
 If your agent uses a different local skill path, copy the folder there instead.
@@ -113,6 +155,10 @@ If your agent uses a different local skill path, copy the folder there instead.
 - n8n workflow validation
 - n8n expression debugging
 - n8n node configuration
+- Claude Code n8n workflow automation
+- build n8n workflows with Claude Code
+- n8n automation skill for Claude Code
+- validate n8n workflows with MCP
 
 ## Contributing
 
